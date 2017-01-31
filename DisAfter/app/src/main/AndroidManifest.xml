@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.uki.disafter" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".tips"
+            android:label="@string/title_activity_tips"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.uki.disafter.MainActivity" />
+        </activity>
+        <activity
+            android:name=".LogIn"
+            android:label="@string/title_activity_log_in" >
+        </activity>
+        <activity
+            android:name=".SignUp"
+            android:label="@string/title_activity_sign_up" >
+        </activity>
+        <activity
+            android:name=".volunteerMain"
+            android:label="@string/title_activity_volunteer_main"
+            android:parentActivityName=".LogIn" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.uki.disafter.LogIn" />
+        </activity>
+        <activity
+            android:name=".campaigns"
+            android:label="@string/title_activity_campaigns"
+            android:parentActivityName=".volunteerMain" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.uki.disafter.volunteerMain" />
+        </activity>
+        <activity
+            android:name=".createCampaign"
+            android:label="@string/title_activity_create_campaign"
+            android:parentActivityName=".campaigns" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.uki.disafter.campaigns" />
+        </activity>
+        <activity
+            android:name=".userSettings"
+            android:label="@string/title_activity_user_settings"
+            android:parentActivityName=".volunteerMain" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.uki.disafter.volunteerMain" />
+        </activity>
+        <activity
+            android:name=".campaignList"
+            android:label="@string/title_activity_campaign_list"
+            android:parentActivityName=".campaigns" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.uki.disafter.campaigns" />
+        </activity>
+        <activity
+            android:name=".CampaignInfo"
+            android:label="@string/title_activity_campaign_info"
+            android:parentActivityName=".campaignList" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.uki.disafter.campaignList" />
+        </activity>
+    </application>
+
+</manifest>
